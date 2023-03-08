@@ -83,9 +83,15 @@ const Navbar = () => {
               <LightMode sx={{ color: dark, fontSize: "25px" }} />
             )}
           </IconButton>
-          <Message sx={{ fontSize: "25px" }} />
-          <Notifications sx={{ fontSize: "25px" }} />
-          <Help sx={{ fontSize: "25px" }} />
+          <IconButton onClick={() => navigate("/chats")}>
+            <Message sx={{ fontSize: "25px", color: dark }} />
+          </IconButton>
+          <IconButton>
+            <Notifications sx={{ fontSize: "25px", color: dark }} />
+          </IconButton>
+          <IconButton>
+            <Help sx={{ fontSize: "25px", color: dark }} />
+          </IconButton>
           <FormControl variant="standard" value={fullName}>
             <Select
               value={fullName}
@@ -158,7 +164,10 @@ const Navbar = () => {
                 <LightMode sx={{ color: dark, fontSize: "25px" }} />
               )}
             </IconButton>
-            <Message sx={{ fontSize: "25px" }} />
+            <Message
+              onClick={() => navigate("/chats")}
+              sx={{ fontSize: "25px" }}
+            />
             <Notifications sx={{ fontSize: "25px" }} />
             <Help sx={{ fontSize: "25px" }} />
             <FormControl variant="standard" value={fullName}>
